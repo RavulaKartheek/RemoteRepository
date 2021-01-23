@@ -1,0 +1,59 @@
+{% extends 'instituteapp/base.html' %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+<body>
+    {% block abc %}
+
+<div class="offset-md-4 col-md-8">
+    <h1>Welcome to Institute Project</h1>
+    <h3 style="margin-top: -5px;">--------------------------------------------------------------</h3>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h2 class="font-weight-bold">About Author:</h2>
+      <p>R.Kartheek has received his B.Tech in Information Technology and M.Tech degree in Computer Science and Engineering from JNTU Kakinada in 2012 and JNTU Kakinada in 2015 respectively. He is dedicated to teaching field from the past 4 years. His research areas included Computer Networks, Data mining, Wireless Networks, oops etc. At present he is working as Assistant Professor in ST.Mary's College of Engineering & Technology Guntur, Andhra Pradesh, India.</p>
+      <p>Designation: Assistant Professor in CSE Department</p>
+      <p>Contact Number: 9959003626</p>
+    </div>
+    <div class="col-md-3">
+      <img src="{% static 'images/Ravula Govardhan.jpeg' %}" alt="author image" style="width: 100%;">
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+    <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="{%static 'images/python1.png'%}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Python for Beginners</h5>
+            <p class="card-text">Python Syntax compared to other programming languages · Python was designed for readability, and has some similarities to the English language with influence ...</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="{%static 'images/python1.png'%}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Python for Beginners</h5>
+            <p class="card-text">Python Syntax compared to other programming languages · Python was designed for readability, and has some similarities to the English language with influence ...</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="{%static 'images/python1.png'%}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Python for Beginners</h5>
+            <p class="card-text">Python Syntax compared to other programming languages · Python was designed for readability, and has some similarities to the English language with influence ...</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+</div>
+    {% endblock %}
+</body>
+</html>

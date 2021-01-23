@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <!-- Cdnlines -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    </head>
+<body style="font-family:'Roboto Condensed', sans-serif;">
+<!-- Navbar Code -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-weight-bold">
+        <a class="navbar-brand" href="{%url 'home'%}">Institutepro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="{%url 'home'%}">Home</a>
+            <a class="nav-link" href="{%url 'contact'%}">Contact</a>
+            <a class="nav-link" href="{%url 'gallery'%}">Gallery</a>
+          </div>
+        </div>
+      </nav>
+
+<!-- header -->
+<div class="jumbotron jumbotron-fluid bg-warning">
+    <div class="container">
+        <h1 class="display-2 font-weight-bold">Welcome to Institute Project</h1>
+        <p class="lead font-weight-bold">One Place for Your Better Future</p>
+    </div>
+</div>
+    
+
+<!-- body-->
+{%block abc%}
+
+
+{%endblock%}
+
+<!-- footer-->
+<center>
+<h7>Website Designed by Ravula Govardhana Manikanta Kartheek</h7>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'instituteapp/base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+<body style="font-family:'Roboto Condensed', sans-serif;">
+
+    {% block abc%}
+   <form method="POST">
+       {%csrf_token%}
+       <h1 class="text-center">Contact us:</h1>
+       <div class="container bg-secondary font-weight-bold text-white">
+        <center>
+       <div class="form-group col-md-6 col-md-offset3">
+           <label>Enter Your Name:</label>
+           <input type="text" class="form-control" placeholder="Name" name='name'>
+       </div></center>
+       <center>
+       <div class="form-group col-md-6 col-md-offset3">
+           <label>Enter Your E-Mail:</label>
+           <input type="email" class="form-control" placeholder="E-Mail id" name="email">
+       </div></center>
+       <center>
+       <div class="form-group col-md-6 col-md-offset3">
+           <label>Comments:</label>
+           <textarea class="form-control" rows="3" style="padding-bottom: 15px;" name="comment"></textarea>
+       </div></center>
+       <center>
+            <input type="submit" value="Enter" class="btn-lg btn-success">
+            <input type="reset" value="Clear" class="btn-lg btn-danger">
+       </center>
+       </div>
+   </form>
+    {% endblock %}
+</body>
+</html>

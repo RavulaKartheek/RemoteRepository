@@ -1,0 +1,61 @@
+{% extends 'instituteapp/base.html' %}
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+<body>
+
+    {% block abc %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/1.jpeg' %}" alt="1" style="width: 100%;"> 
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/2.jpeg' %}" alt="2" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/3.jpeg' %}" alt="3" style="width: 100%;">
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/4.jpeg' %}" alt="4" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/5.jpeg' %}" alt="5" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/6.jpeg' %}" alt="6" style="width: 100%;">
+            </div>
+        </div> <br>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/1.jpeg' %}" alt="1" style="width: 100%;"> 
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/2.jpeg' %}" alt="2" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/3.jpeg' %}" alt="3" style="width: 100%;">
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/4.jpeg' %}" alt="4" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/5.jpeg' %}" alt="5" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/6.jpeg' %}" alt="6" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>
+</html>
