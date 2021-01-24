@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        {% include 'cdnlines.html' %}
+    </head>
+<style>
+    label{
+        font-family:'Roboto Condensed', sans-serif;
+    }
+</style>
+<body>
+    <h2 class="text-danger text-center alert alert-success" style="margin-top: 5px; font-family:'Roboto Condensed', sans-serif;">Employee Details Project (Ravula Kartheek)</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 bg-primary">
+                <form method="POST">
+                    {% csrf_token %}
+                    <h3 class="text-white text-center" style="font-family:'Roboto Condensed', sans-serif;">Add New Employees:</h3>
+
+                    <label class="text-white">Enter your ID:</label>
+                    <input type="text" class="form-control" placeholder="ID" name="empidentity">
+
+                    <label class="text-white">Enter your First Name:</label>
+                    <input type="text" class="form-control" placeholder="First Name" name="fname">
+
+                    <label class="text-white">Enter your Last Name:</label>
+                    <input type="text" class="form-control" placeholder="Last Name" name="lname">
+
+                    <label class="text-white">Enter Salary:</label>
+                    <input type="number" class="form-control" placeholder="Enter Slary" name="sal">
+
+                    <label class="text-white">Enter Bonus:</label>
+                    <input type="number" class="form-control" placeholder="Enter Bonus" name="bonus">
+
+                    <label class="text-white">Enter your Department:</label>
+                    <input type="text" class="form-control" placeholder="Enter Department" name="dep">
+
+                    <label class="text-white">Enter Hire date:</label>
+                    <input type="text" class="form-control" placeholder="Hire date" name="hdate"> 
+
+                    <label class="text-white">Enter Phone Number:</label>
+                    <input type="number" class="form-control" placeholder="Phone number" name="pnumber">
+
+                    <label class="text-white">Enter Email-Id:</label>
+                    <input type="email" class="form-control" placeholder="E-mail id" name="email">
+                    <center>
+                        <input type="submit" value="Enter" class="btn-lg btn-success" style="margin-top: 10px; font-family:'Roboto Condensed', sans-serif;">
+                        <input type="reset" value="Clear" class="btn-lg btn-danger" style="margin-top: 10px; font-family:'Roboto Condensed', sans-serif;">
+                    </center>
+                </form>
+            </div>
+            <div class="col-md-9">
+                <h3 class="alert alert-warning text-center" style="font-family:'RobotCo ondensed', sans-serif;">Show Employees Information:</h3>
+                {% if employees %}
+                <table class="table-striped table-bordered text-center font-weight-bold" style="font-family:'Roboto Condensed', sans-serif;">
+                    <thead class="bg-danger text-white">
+                        <tr>
+                            <th>Employee Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Salary</th>
+                            <th>Bonus</th>
+                            <th>Department</th>
+                            <th>Hire Date</th>
+                            <th>Phone Number</th>
+                            <th>Email Id</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for employees in employees%}
+                        <tr>
+                            <td>{{employees.emp_identity}}</td>
+                            <td>{{employees.first_name}}</td>
+                            <td>{{employees.last_name}}</td>
+                            <td>{{employees.salary}}</td>
+                            <td>{{employees.bonus}}</td>
+                            <td>{{employees.department}}</td>
+                            <td>{{employees.hire_date}}</td>
+                            <td>{{employees.phone_number}}</td>
+                            <td>{{employees.email}}</td>
+                            <td>
+                                <a href="{% url 'update' employees.id %}" class="btn-sm btn-warning">Update</a>
+                                <a href="{% url 'delete' employees.id %}" class="btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <h4>Data is not available</h4>
+                {% endif %}
+        </div>
+        </div>
+    </div>
+</body>
+</html>

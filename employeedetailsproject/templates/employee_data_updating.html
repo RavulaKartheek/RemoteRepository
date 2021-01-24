@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        {% include 'cdnlines.html' %}
+    </head>
+<style>
+    
+</style>
+<body>
+    <h2 class="text-danger text-center alert alert-success" style="margin-top: 5px; font-family:'Roboto Condensed', sans-serif;">Employee Details Project (Ravula Kartheek)</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 bg-primary">
+                <form method="POST" action="{% url 'updated_data_save' employees.id %}">
+                    {% csrf_token %}
+                    <h3 class="text-white text-center" style="font-family:'Roboto Condensed', sans-serif;">Update Employees Data:</h3>
+
+                    <label class="text-white">Enter your ID:</label>
+                    <input type="text" class="form-control" placeholder="ID" name="empidentity" value="{{ employees.emp_identity }}">
+
+                    <label class="text-white">Enter your First Name:</label>
+                    <input type="text" class="form-control" placeholder="First Name" name="fname" value="{{ employees.first_name }}">
+
+                    <label class="text-white">Enter your Last Name:</label>
+                    <input type="text" class="form-control" placeholder="Last Name" name="lname" value="{{ employees.last_name }}">
+
+                    <label class="text-white">Enter Salary:</label>
+                    <input type="number" class="form-control" placeholder="Enter Slary" name="sal" value="{{ employees.salary }}">
+
+                    <label class="text-white">Enter Bonus:</label>
+                    <input type="number" class="form-control" placeholder="Enter Bonus" name="bonus" value="{{ employees.bonus }}">
+
+                    <label class="text-white">Enter your Department:</label>
+                    <input type="text" class="form-control" placeholder="Enter Department" name="dep" value="{{ employees.department }}">
+
+                    <label class="text-white">Enter Hire date:</label>
+                    <input type="text" class="form-control" placeholder="Hire date" name="hdate" value="{{ employees.hire_date }}"> 
+
+                    <label class="text-white">Enter Phone Number:</label>
+                    <input type="number" class="form-control" placeholder="Phone number" name="pnumber" value="{{ employees.phone_number }}">
+
+                    <label class="text-white">Enter Email-Id:</label>
+                    <input type="email" class="form-control" placeholder="E-mail id" name="email" value="{{ employees.email }}">
+                    <center>
+                        <input type="submit" value="Update" class="btn-lg btn-success" style="margin-top: 10px; font-family:'Roboto Condensed', sans-serif;">
+                        <input type="reset" value="Clear" class="btn-lg btn-danger" style="margin-top: 10px; font-family:'Roboto Condensed', sans-serif;">
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+    <h6 class="text-left font-weight-bold" style="font-family:'Roboto Condensed', sans-serif; margin-top: 5px;">Return to Home Page << </h6>
+</body>
+</html>
